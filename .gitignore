@@ -33,4 +33,4 @@ Now, open the new .gitignore file and add the following lines. This will tell Gi
 *.log
 
 # OS-specific files
-.DS_Store
+.DS_Storenode_modules/
