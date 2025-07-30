@@ -1,1 +1,36 @@
-node_modules
+This is a very common and important error to run into!
+
+The problem is that you're trying to push your node_modules folder to GitHub. This folder contains thousands of files and is often very large, which is why GitHub has a 100 MB file size limit that you're hitting.
+
+The node_modules folder should never be committed to GitHub. It's a temporary folder that anyone can recreate perfectly just by running npm install. The only thing you need to save is the "recipe" for it, which is your package.json file.
+
+Here is how to fix it in four simple steps.
+
+## Step 1: Create a .gitignore File
+First, you need to tell Git to ignore the node_modules folder. You do this with a special file called .gitignore.
+
+In your terminal, inside the clinic-frontend folder, run this command to create the file:
+
+Bash
+
+touch .gitignore
+Now, open the new .gitignore file and add the following lines. This will tell Git to ignore node_modules and other unnecessary files.
+
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build folder
+/build
+
+# Environment variables
+.env*.local
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
