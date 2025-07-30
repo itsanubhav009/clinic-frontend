@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { @apply bg-gray-900 text-gray-50; }
+.rdp {
+    --rdp-cell-size: 36px; --rdp-accent-color: #2563eb;
+    --rdp-background-color: #374151; --rdp-border-radius: 6px;
+}
+.rdp-caption_label { font-weight: 700; color: #f9fafb; }
+.rdp-head_cell { color: #9ca3af; font-size: 0.8rem; }
+.rdp-day { transition: background-color 0.1s ease-in-out; }
+.rdp-day_today { font-weight: 700; color: #60a5fa; border: 1px solid #60a5fa; }
+.rdp-day_outside { color: #6b7280; }
