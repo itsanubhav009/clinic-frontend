@@ -34,3 +34,4 @@ Now, open the new .gitignore file and add the following lines. This will tell Gi
 
 # OS-specific files
 .DS_Storenode_modules/
+node_modules/
