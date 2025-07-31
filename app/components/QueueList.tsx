@@ -29,7 +29,7 @@ export function QueueList({ onUpdate }: { onUpdate: () => void; }) {
             setQueue(sortedQueue);
             setAvailableDoctors(doctorsRes.data);
 
-            const appointmentPatientsInQueue = new Set(sortedQueue.map(p => p.patientName));
+            const appointmentPatientsInQueue = new Set(sortedQueue.map((p: any) => p.patientName));
             const waitingAppointmentPatients = appointmentsRes.data.filter((p: any) => !appointmentPatientsInQueue.has(p.patientName) && p.status === 'Booked');
             setTodaysAppointments(waitingAppointmentPatients);
 
